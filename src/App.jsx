@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import './App.css'
+import './style/button.css'
 import AnimatedContent from './components/AnimatedContent'
 
 function App() {
-  const [count, setCount] = useState(0)
   const [lang, setLang] = useState('en')
 
   const translations = {
@@ -51,11 +51,23 @@ function App() {
             <p className='home-name'>Ethan Wang</p>
             <p className='home-role'>I'm a Software Engineer</p>
             <p className='home-brief'>I have a strong passion for software engineering with experience building{' '} 
-                                      <span style={{color: '#64ffda'}}>Fullstack</span>{' '}
+                                      <span style={{color: 'var(--main-color-light)'}}>Fullstack</span>{' '}
                                        web applications and applying {' '}
-                                      <span style={{color: '#64ffda'}}>Deep Learning</span>{' '}
+                                      <span style={{color: 'var(--main-color-light)'}}>Deep Learning</span>{' '}
                                        to solve real-world problems. </p>
+            <button className='home-button'>View Portfolio</button>
           </AnimatedContent>
+        </div>
+      </div>
+      <div className='about'>
+        <div className='about-box'>
+          <div className='about-left'>
+            <div className='about-me'>About Me</div>
+            <p className='about-para'>Hi there! My name is Ethan and I love creating useful web applications that could help others and myself.</p>
+            <p className='about-para'>My interest in web development began with a front-end development course I took at UNSW in 2024, where I learned to build my own website and develop productivity tools.</p>
+            <p className='about-para'>Today, I have graduated from the University of New South Wales Master of IT and worked as a full stack engineer at RED BLACK TREE TECHNOLOGIES PTY LTD!</p>
+          </div>
+          <div className='about-right'></div>
         </div>
       </div>
     </>

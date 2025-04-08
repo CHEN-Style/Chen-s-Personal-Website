@@ -1,0 +1,56 @@
+/* From Uiverse.io by cssbuttons-io */ 
+.home-button {
+  --color: #64ffdbd3;
+  font-family: inherit;
+  display: inline-block;
+  width: 160px;
+  height: 50px;
+  line-height: 45px;
+  margin-left: 5px;
+  margin-top: 30px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1px solid var(--color);
+  transition: color 0.4s, transform 0.2s ease-in-out;
+  z-index: 1;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: var(--color);
+  background-color: transparent;
+}
+
+.home-button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 230px;
+  border-radius: 50%;
+}
+
+.home-button:hover {
+  color: #0a192f;
+}
+
+.home-button:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.5s;
+}
+
+.home-button:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.home-button:active:before {
+  background: #64ffdba2;
+  transition: background 0s;
+}
+
+.home-button:active {
+  transform: scale(0.95);
+}
