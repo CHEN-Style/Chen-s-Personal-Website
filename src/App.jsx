@@ -2,13 +2,20 @@ import { useState } from 'react'
 import './App.css'
 import './style/button.css'
 import AnimatedContent from './components/AnimatedContent'
+import TiltedCard from './components/TiltedCard'
 
 import ArrowIcon from './svgs/ArrorIcon'
 import GithubIcon from './svgs/GithubIcon'
 import PostIcon from './svgs/PostIcon'
+import FolderIcon from './svgs/FolderIcon'
+import Leetcode from './svgs/Leetcode'
 import ShinyText from './components/ShinyText'
 
+import photo from './pic/Photo.png'
 import todoPic from './pic/todolist-proj.png'
+import RbtPic from './pic/RBT.png'
+import Recommend from './pic/Recommend.png'
+
 
 function App() {
   const [lang, setLang] = useState('en')
@@ -100,7 +107,41 @@ function App() {
             </div>
           </div>
           </AnimatedContent>
-          <div className='about-right'></div>
+          <AnimatedContent
+            distance={150}
+            direction="horizontal"
+            reverse={false}
+            config={{ tension: 50, friction: 20 }}
+            initialOpacity={0}
+            animateOpacity
+            scale={1}
+            threshold={0.1}
+          >
+            <div className='about-right'>
+              <div className='about-photo-box'>
+                <TiltedCard
+                  imageSrc={photo}
+                  altText="Personal pic"
+                  captionText="This is me"
+                  containerHeight="300px"
+                  containerWidth="300px"
+                  imageHeight="300px"
+                  imageWidth="300px"
+                  rotateAmplitude={12}
+                  scaleOnHover={1.2}
+                  showMobileWarning={false}
+                  showTooltip={true}
+                  displayOverlayContent={false}
+                  overlayContent={
+                    <p className="tilted-card-demo-text">
+                      This is me
+                    </p>
+                  }
+                />
+              </div>
+            </div>
+          </AnimatedContent>
+
         </div>
       </div>
       <div className='work'>
@@ -129,7 +170,7 @@ function App() {
                                         performance-optimized modern online forum system, RBT Forum, 
                                         covering the full project lifecycle from requirements analysis, 
                                         system architecture design, 
-                                        front- and back-end development.</p>
+                                        front-end and back-end development.</p>
             </div>
             <div className='work-content' style={{marginTop: '20px'}}>
               <div style={{width:'30px', paddingRight: '20px', paddingTop:'5px'}}>
@@ -151,48 +192,259 @@ function App() {
       <div className='project'>
         <div className='project-box'>
           <div className='project-header'>My Noteworthy Projects</div>
-          <div className="project-container" style={{marginTop: '60px'}}>
-            <a
-              href="https://chen-style.github.io/todolist-deploy/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-left-pic"
-            >
-              <img src={todoPic} alt="todo" />
-            </a>
-            <div className="project-right-info">
-              <p className='project-right-header'>Featured Project</p>
-              <p className='project-right-title'>Todo List</p>
-              <div className='project-right-card'>
-                <p className="description">Netflix is a subscription-based streaming service ...</p>
-              </div>
-              <div className='project-right-skillset'>
-                <p className='project-skill'>React</p>
-                <p className='project-skill'>Vite</p>
-                <p className='project-skill'>HTML</p>
-                <p className='project-skill'>CSS</p>
-              </div>
-              <div className='project-right-iconBox'>
-                <a
-                  href="https://github.com/CHEN-Style/TodoList"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className='link-hover'
-                >
-                  <GithubIcon/> 
-                </a>
-                <a
-                  href="https://github.com/CHEN-Style/TodoList"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className='link-hover'
-                >
-                  <PostIcon/>
-                </a>
+          <AnimatedContent
+          distance={150}
+          direction="horizontal"
+          reverse={true}
+          config={{ tension: 50, friction: 20 }}
+          initialOpacity={0}
+          animateOpacity
+          scale={1}
+          threshold={0.1}
+          >
+            <div className="project-container" style={{marginTop: '60px'}}>
+              <a
+                href="https://chen-style.github.io/todolist-deploy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-left-pic"
+              >
+                <img src={todoPic} alt="todo" />
+              </a>
+              <div className="project-right-info">
+                <p className='project-right-header'>Featured Project</p>
+                <p className='project-right-title'>Todo List</p>
+                <div className='project-right-card'>
+                  <p className="description">This is a lightweight memo website that makes it convenient for people to record pending tasks and set priorities</p>
+                </div>
+                <div className='project-right-skillset'>
+                  <p className='project-skill'>React</p>
+                  <p className='project-skill'>Vite</p>
+                  <p className='project-skill'>HTML</p>
+                  <p className='project-skill'>CSS</p>
+                </div>
+                <div className='project-right-iconBox'>
+                  <a
+                    href="https://github.com/CHEN-Style/TodoList"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='link-hover'
+                  >
+                    <GithubIcon/> 
+                  </a>
+                  <a
+                    href="https://github.com/CHEN-Style/TodoList"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='link-hover'
+                  >
+                    <PostIcon/>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          </AnimatedContent>
+          
+          <AnimatedContent
+          distance={150}
+          direction="horizontal"
+          reverse={false}
+          config={{ tension: 50, friction: 20 }}
+          initialOpacity={0}
+          animateOpacity
+          scale={1}
+          threshold={0.1}
+          >
+            <div className="project-container" style={{marginTop: '60px', flexDirection: 'row-reverse'}}>
+              <a
+                href="https://chen-style.github.io/todolist-deploy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-left-pic"
+              >
+                <img src={RbtPic} alt="RBT" />
+              </a>
+              <div className="project-left-info">
+                <p className='project-right-header'>Featured Project</p>
+                <p className='project-right-title'>RBT Forum</p>
+                <div className='project-left-card'>
+                  <p className="description">This is a lightweight memo website that makes it convenient for people to record pending tasks and set priorities</p>
+                </div>
+                <div className='project-right-skillset'>
+                  <p className='project-skill'>React</p>
+                  <p className='project-skill'>Vite</p>
+                  <p className='project-skill'>HTML</p>
+                  <p className='project-skill'>CSS</p>
+                </div>
+                <div className='project-right-iconBox'>
+                  <a
+                    href="https://github.com/CHEN-Style/TodoList"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='link-hover'
+                  >
+                    <GithubIcon/> 
+                  </a>
+                  <a
+                    href="https://github.com/CHEN-Style/TodoList"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='link-hover'
+                  >
+                    <PostIcon/>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </AnimatedContent>
+          
+          <AnimatedContent
+          distance={150}
+          direction="horizontal"
+          reverse={true}
+          config={{ tension: 50, friction: 20 }}
+          initialOpacity={0}
+          animateOpacity
+          scale={1}
+          threshold={0.1}
+          >
+            <div className="project-container" style={{marginTop: '60px'}}>
+              <a
+                href="https://chen-style.github.io/todolist-deploy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-left-pic"
+              >
+                <img src={Recommend} alt="todo" />
+              </a>
+              <div className="project-right-info">
+                <p className='project-right-header'>Featured Project</p>
+                <p className='project-right-title'>Recommend System</p>
+                <div className='project-right-card'>
+                  <p className="description">This is a lightweight memo website that makes it convenient for people to record pending tasks and set priorities</p>
+                </div>
+                <div className='project-right-skillset'>
+                  <p className='project-skill'>React</p>
+                  <p className='project-skill'>Vite</p>
+                  <p className='project-skill'>HTML</p>
+                  <p className='project-skill'>CSS</p>
+                </div>
+                <div className='project-right-iconBox'>
+                  <a
+                    href="https://github.com/CHEN-Style/TodoList"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='link-hover'
+                  >
+                    <GithubIcon/> 
+                  </a>
+                  <a
+                    href="https://github.com/CHEN-Style/TodoList"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='link-hover'
+                  >
+                    <PostIcon/>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </AnimatedContent>
+
         </div>
+      </div>
+      <div className='sundary'>
+        <AnimatedContent
+        distance={150}
+        direction="vertical"
+        reverse={false}
+        config={{ tension: 50, friction: 20 }}
+        initialOpacity={0}
+        animateOpacity
+        scale={1}
+        threshold={0.1}
+        >
+          <div className='sundary-header'>Other Noteworthy Things</div>
+          <div className='sundary-card-box'>
+
+            <div className='sundary-card'>
+              <div className='sundary-card-icon-box'>
+                <FolderIcon/>
+                <div className='sundary-card-icon-box2'>
+                  <GithubIcon/>
+                  <PostIcon/>
+                </div>
+              </div>
+              <div className='sundary-card-title'>Online Library Platform</div>
+              <div className='sundary-card-context'>Multifunctional e-commerce application that allows users to browse and purchase books online.</div>
+              <div className='sundary-card-skillset'>
+                <div className='sundary-card-skill'>JavaScript</div>
+                <div className='sundary-card-skill'>Python</div>
+              </div>
+            </div>
+
+            <div className='sundary-card'>
+              <div className='sundary-card-icon-box'>
+                <FolderIcon/>
+                <div className='sundary-card-icon-box2'>
+                  <GithubIcon/>
+                  <PostIcon/>
+                </div>
+              </div>
+              <div className='sundary-card-title'>Online Library Platform</div>
+              <div className='sundary-card-context'>A minimalistic todo list web application made with SvelteKit. Comes with all the essential functionality like add, edit and delete.</div>
+              <div className='sundary-card-skillset'>
+                <div className='sundary-card-skill'>JavaScript</div>
+                <div className='sundary-card-skill'>Python</div>
+              </div>
+            </div>
+
+            <div className='sundary-card'>
+              <div className='sundary-card-icon-box'>
+                <FolderIcon/>
+                <div className='sundary-card-icon-box2'>
+                  <GithubIcon/>
+                  <PostIcon/>
+                </div>
+              </div>
+              <div className='sundary-card-title'>Online Library Platform</div>
+              <div className='sundary-card-context'>Multifunctional e-commerce application that allows users to browse and purchase books online.</div>
+              <div className='sundary-card-skillset'>
+                <div className='sundary-card-skill'>JavaScript</div>
+                <div className='sundary-card-skill'>Python</div>
+              </div>
+            </div>
+
+          </div>
+        </AnimatedContent>
+      </div>
+
+      <AnimatedContent
+      distance={150}
+      direction="vertical"
+      reverse={false}
+      config={{ tension: 50, friction: 20 }}
+      initialOpacity={0}
+      animateOpacity
+      scale={1}
+      threshold={0.1}
+      >
+        <div className='contact'>
+          <div className='contact-header1'>What's Next?</div>
+          <div className='contact-header2'>Get In Touch</div>
+          <div className='contact-text text-hover'>I am currently looking for new opportunities so my inbox is always open. Whether you have a question or just want to say hi, please send me a message and I'll get back to you!</div>
+          <button className='home-button'>Say Hello</button>
+        </div>
+      </AnimatedContent>
+      <div className='blank' style={{height: '200px'}}></div>
+      <div className='left-bar'>
+        <GithubIcon/>
+        <Leetcode/>
+        <div className='line'></div>
+      </div>
+      <div className='right-bar'>
+        <div className='right-bar-email text-hover'>ChenStyle2022@outlook.com</div>
+        <div className='line'></div>
       </div>
     </>
   )

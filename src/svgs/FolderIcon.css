@@ -1,0 +1,8 @@
+.folder-icon .icon-path {
+  fill: #64ffdbd3;
+  transition: fill 0.2s ease;
+}
+
+.folder-icon:hover .icon-path {
+  fill: #f7b500; /* 悬停变色 */
+}
