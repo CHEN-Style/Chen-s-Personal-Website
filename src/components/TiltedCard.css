@@ -63,3 +63,53 @@
   opacity: 0;
   z-index: 3;
 }
+
+/* 增强的手机端适配 */
+@media screen and (max-width: 768px) {
+  .tilted-card-figure {
+    perspective: 600px;
+  }
+  
+  .tilted-card-img {
+    border-radius: 12px;
+  }
+  
+  .tilted-card-mobile-alert {
+    font-size: 0.75rem;
+    top: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tilted-card-figure {
+    perspective: 400px;
+    width: 250px;
+    height: 250px;
+  }
+  
+  .tilted-card-img {
+    border-radius: 10px;
+  }
+  
+  .tilted-card-mobile-alert {
+    font-size: 0.7rem;
+    top: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .tilted-card-figure {
+    perspective: 300px;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .tilted-card-img {
+    border-radius: 8px;
+  }
+  
+  .tilted-card-mobile-alert {
+    font-size: 0.65rem;
+    top: 0;
+  }
+}

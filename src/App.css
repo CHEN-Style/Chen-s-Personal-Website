@@ -649,3 +649,355 @@ body {
 .modal-content button:hover {
   background-color: var(--main-color-light);
 }
+
+/* ============================================================================= */
+/* 响应式设计 - 媒体查询 */
+/* ============================================================================= */
+
+/* 平板适配 (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .home-box,
+  .about-box,
+  .work-box,
+  .project-box {
+    width: 90%;
+    max-width: 800px;
+  }
+
+  .project-container {
+    width: 90%;
+    max-width: 750px;
+    justify-content: center;
+  }
+
+  /* 隐藏项目图片 */
+  .project-left-pic {
+    display: none;
+  }
+
+  /* 居中项目信息内容 */
+  .project-right-info,
+  .project-left-info {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-right-card,
+  .project-left-card {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .project-right-skillset {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .project-right-iconBox {
+    justify-content: center;
+  }
+
+  .contact-text {
+    width: 80%;
+    max-width: 500px;
+  }
+}
+
+/* 小平板和大手机适配 (480px - 768px) */
+@media screen and (max-width: 768px) {
+  body {
+    min-width: 320px;
+  }
+
+  .navigationBar {
+    min-width: 320px;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .navigationBarText {
+    font-size: 16px;
+  }
+
+  /* 首页适配 */
+  .home-box {
+    width: 90%;
+    padding: 0 20px;
+  }
+
+  .home-name,
+  .home-role {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .home-brief {
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  /* 关于我部分适配 */
+  .about {
+    height: auto;
+    padding: 50px 0;
+  }
+
+  .about-box {
+    width: 90%;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-skill-row {
+    gap: 40px;
+  }
+
+  /* 工作经历适配 */
+  .work {
+    height: auto;
+    margin-top: 80px;
+    padding: 50px 0;
+  }
+
+  .work-box {
+    width: 90%;
+    padding: 0 20px;
+  }
+
+  .work-contentBox {
+    padding-left: 40px;
+  }
+
+  /* 项目部分适配 */
+  .project {
+    margin-top: 80px;
+    padding: 50px 0;
+  }
+
+  .project-box {
+    width: 90%;
+    padding: 0 20px;
+  }
+
+  .project-container {
+    margin-bottom: 60px;
+  }
+
+  /* 其他项目部分适配 */
+  .sundary-card-box {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .sundary-card {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  /* 联系部分适配 */
+  .contact {
+    margin-top: 100px;
+    padding: 0 20px;
+  }
+
+  .contact-header2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .contact-text {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  /* 侧边栏隐藏 */
+  .left-bar,
+  .right-bar {
+    display: none;
+  }
+}
+
+/* 手机适配 (320px - 480px) */
+@media screen and (max-width: 480px) {
+  .header {
+    height: 60px;
+  }
+
+  .navigationBar {
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .navigationBarText {
+    font-size: 14px;
+  }
+
+  /* 首页进一步适配 */
+  .home-box {
+    padding: 0 15px;
+  }
+
+  .home-name,
+  .home-role {
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  .home-brief {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  /* 关于我部分进一步适配 */
+  .about-box {
+    padding: 0 15px;
+  }
+
+  .about-me {
+    font-size: 24px;
+  }
+
+  .about-para {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .about-skill-row {
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* 工作经历进一步适配 */
+  .work-box {
+    padding: 0 15px;
+  }
+
+  .work-header {
+    font-size: 24px;
+  }
+
+  .work-contentBox {
+    padding-left: 20px;
+  }
+
+  .work-content-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  /* 项目部分进一步适配 */
+  .project-box {
+    padding: 0 15px;
+  }
+
+  .project-header {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .project-right-title {
+    font-size: 28px;
+  }
+
+  .project-right-card,
+  .project-left-card {
+    padding: 15px 20px;
+  }
+
+  /* 其他项目部分进一步适配 */
+  .sundary-header {
+    font-size: 28px;
+    line-height: 40px;
+    padding: 0 15px;
+  }
+
+  .sundary-card {
+    width: 95%;
+    height: auto;
+    min-height: 300px;
+  }
+
+  /* 联系部分进一步适配 */
+  .contact {
+    padding: 0 15px;
+  }
+
+  .contact-header2 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  .contact-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  /* 模态框适配 */
+  .modal-content {
+    width: 95%;
+    max-width: 350px;
+    padding: 1.5rem;
+  }
+}
+
+/* 超小屏幕适配 (最大320px) */
+@media screen and (max-width: 320px) {
+  .navigationBar {
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .navigationBarText {
+    font-size: 12px;
+  }
+
+  .home-box,
+  .about-box,
+  .work-box,
+  .project-box {
+    padding: 0 10px;
+  }
+
+  .home-name,
+  .home-role {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .home-brief {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .about-me,
+  .work-header,
+  .project-header,
+  .sundary-header {
+    font-size: 20px;
+  }
+
+  .contact-header2 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
